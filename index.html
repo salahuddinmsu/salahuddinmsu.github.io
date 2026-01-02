@@ -3,213 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salah Uddin | Data Analyst & Applied Statistician</title>
-    
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts (optional - for better typography) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <title>Salah Uddin | Applied Statistics Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
+            line-height: 1.6;
             color: #333;
+            background-color: #f9f9f9;
         }
-        .header-section {
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        .section-title {
-            border-bottom: 3px solid #007bff;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .skill-badge {
-            background-color: #e9ecef;
-            color: #495057;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin: 5px;
-            display: inline-block;
-        }
+
         a {
-            color: #007bff;
             text-decoration: none;
+            color: #0077b6;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        footer {
-            background-color: #343a40;
+
+        /* Header */
+        header {
+            background: #023e8a;
             color: white;
-            padding: 20px 0;
-            margin-top: 50px;
+            padding: 40px 20px;
+            text-align: center;
         }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        header a {
+            color: #90e0ef;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #023e8a;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0077b6;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Professional Summary */
+        #about p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Education & Experience */
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #0077b6;
+            margin-bottom: 5px;
+        }
+
+        .card span {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .card ul {
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Skills */
+        #skills .skill-category {
+            margin-bottom: 30px;
+        }
+
+        #skills h3 {
+            margin-bottom: 10px;
+            color: #023e8a;
+        }
+
+        #skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        #skills ul li {
+            background: #0077b6;
+            color: white;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        #projects .project {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        #projects .project h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #023e8a;
+            color: white;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #0077b6;
+            color: white;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #023e8a;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <section class="header-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold">SALAH UDDIN</h1>
-            <p class="lead">
-                Mankato, MN — 
-                <a href="tel:+15073518995" class="text-white">507-351-8995</a> — 
-                <a href="mailto:shamimcu0233@gmail.com" class="text-white">shamimcu0233@gmail.com</a> — 
-                <a href="https://linkedin.com/in/salah-uddin-shamim" target="_blank" class="text-white">linkedin.com/in/salah-uddin-shamim</a>
-            </p>
+    <!-- HEADER -->
+    <header>
+        <h1>Salah Uddin</h1>
+        <p>Applied Statistics | Data Analysis | Survival Analysis | Teaching</p>
+        <p>
+            <a href="mailto:shamimcu0233@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/salah-uddin-shamim" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Skilled data analyst with 12+ years of banking and financial experience combined with 6 months of Mathematics and Statistics teaching. Currently pursuing an M.S. in Applied Statistics with a goal of becoming a statistics educator and researcher.</p>
+        <p>Hands-on experience in survival analysis, data modeling, and statistical programming using R and SAS. Dedicated to applying statistical methods to solve real-world business and research problems, with strong ability to communicate complex findings to diverse audiences.</p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="card">
+            <h3>Master of Science in Applied Statistics</h3>
+            <span>Minnesota State University, Mankato | Expected May 2027</span>
+            <ul>
+                <li>Master's Project: Inflammatory Breast Cancer and Racial Disparities: A SEER Database Analysis of Survival Outcomes</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Master of Science in Statistics</h3>
+            <span>University of Chittagong, Bangladesh | Graduated May 2012</span>
+            <ul>
+                <li>Thesis: An Econometric Analysis of Household Consumption & Food Security in Bangladesh</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Bachelor of Science (Honors) in Statistics</h3>
+            <span>University of Chittagong, Bangladesh | Graduated Jan 2010</span>
         </div>
     </section>
 
-    <div class="container my-5">
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <h2>Professional Experience</h2>
 
-        <!-- Professional Summary -->
-        <section class="mb-5">
-            <h2 class="section-title">Professional Summary</h2>
-            <p>
-                Skilled data analyst with 12+ years of banking and financial experience combined with 6 months of Mathematics and Statistics teaching. 
-                Currently pursuing an M.S. in Applied Statistics with the goal of becoming a statistics educator and researcher. 
-                Hands-on experience in survival analysis, data modeling, and statistical programming using R and SAS. 
-                Strong ability to work with complex data and communicate findings clearly to both technical and non-technical audiences. 
-                Dedicated to applying statistical methods to solve real-world business and research problems.
-            </p>
-        </section>
-
-        <!-- Education -->
-        <section class="mb-5">
-            <h2 class="section-title">Education</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h5 class="fw-bold">Master of Science in Applied Statistics <span class="text-muted float-end">Expected: May 2027</span></h5>
-                    <p class="mb-1">Minnesota State University, Mankato • Mankato, MN</p>
-                    <ul>
-                        <li>Master’s Project: “Inflammatory Breast Cancer and Racial Disparities: A SEER Database Analysis of Survival Outcomes”</li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <h5 class="fw-bold">Master of Science in Statistics <span class="text-muted float-end">May 2012</span></h5>
-                    <p class="mb-1">University of Chittagong • Chittagong, Bangladesh</p>
-                    <ul>
-                        <li>Thesis: “An Econometric Analysis of Household Consumption & Food Security in Bangladesh”</li>
-                    </ul>
-                </div>
-                <div class="col-12">
-                    <h5 class="fw-bold">Bachelor of Science (Honors) in Statistics <span class="text-muted float-end">Jan 2010</span></h5>
-                    <p>University of Chittagong • Chittagong, Bangladesh</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience -->
-        <section class="mb-5">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="mb-4">
-                <h5 class="fw-bold">Research Assistant <span class="text-muted float-end">Aug 2025 – Present</span></h5>
-                <p class="mb-1">Department of Mathematics & Statistics, Minnesota State University, Mankato</p>
-                <ul>
-                    <li>Conducted retrospective cohort study of 3,174 patients using SEER database, identifying significant survival disparities by IBC status and race</li>
-                    <li>Developed and validated multivariable Cox regression models (HR 1.308 for Black women in non-IBC cohort, p=0.006)</li>
-                    <li>Implemented Fine-Gray competing risk and parametric AFT models (Weibull, Log-normal)</li>
-                    <li>Created publication-quality visualizations (Kaplan-Meier, Forest plots, CIF) using R</li>
-                    <li>Collaborated on manuscript preparation for peer-reviewed oncology journals</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5 class="fw-bold">Graduate Teaching Assistant <span class="text-muted float-end">Aug 2025 – Present</span></h5>
-                <p class="mb-1">Department of Mathematics & Statistics, Minnesota State University, Mankato</p>
-                <ul>
-                    <li>Teach STAT 154 (Elementary Statistics) and assist in MATH 098 & MATH 112</li>
-                    <li>Design lectures, assessments, and introduce students to R for data analysis</li>
-                    <li>Provide office hours, tutoring, and develop supplemental learning materials</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5 class="fw-bold">Senior Principal Officer & Manager Operations <span class="text-muted float-end">Jul 2019 – Aug 2025</span></h5>
-                <p class="mb-1">First Security Islami Bank PLC • Bangladesh</p>
-                <ul>
-                    <li>Managed retail/SME operations for 10,000+ accounts, overseeing credit and risk management</li>
-                    <li>Analyzed financial datasets, created dashboards, and developed data-driven strategies</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5 class="fw-bold">Senior Officer / Probationary Officer <span class="text-muted float-end">Jul 2013 – Jun 2019</span></h5>
-                <p class="mb-1">First Security Islami Bank PLC • Bangladesh</p>
-                <ul>
-                    <li>Conducted credit risk analysis, financial modeling, and regulatory reporting</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Technical Skills -->
-        <section class="mb-5">
-            <h2 class="section-title">Technical Skills</h2>
-            <div>
-                <strong>Statistical Software:</strong> 
-                <span class="skill-badge">R (advanced)</span>
-                <span class="skill-badge">SAS (intermediate)</span>
-                <span class="skill-badge">SPSS</span>
-                <span class="skill-badge">Excel (advanced + VBA)</span>
-                <span class="skill-badge">Power BI</span>
-                <span class="skill-badge">Tableau</span>
-            </div>
-            <div class="mt-3">
-                <strong>Key R Packages:</strong> survival, survminer, dplyr, ggplot2, tidyr, caret, randomForest, glmnet, data.table
-            </div>
-            <div class="mt-3">
-                <strong>Statistical Methods:</strong> Survival analysis, Regression models, Machine learning, Time series, Hypothesis testing, ANOVA, Propensity score matching
-            </div>
-            <div class="mt-3">
-                <strong>Tools:</strong> RStudio, Jupyter, Git/GitHub, SQL, LaTeX, SEER database
-            </div>
-        </section>
-
-        <!-- Key Projects -->
-        <section class="mb-5">
-            <h2 class="section-title">Key Projects</h2>
+        <div class="card">
+            <h3>Research Assistant</h3>
+            <span>Minnesota State University, Mankato | Aug 2025 – Present</span>
             <ul>
-                <li><strong>Breast Cancer Survival Analysis Using SEER Database (2025 – Present)</strong><br>
-                    Analyzed 10-year survival across subtypes; developed Cox models; created Kaplan-Meier curves and visualizations in R.</li>
-                <li><strong>Econometric Analysis of Food Security in Bangladesh (2012)</strong><br>
-                    Applied regression models on HIES data to identify determinants of food security using SPSS.</li>
+                <li>Conducted retrospective cohort study of 3,174 patients with locally advanced breast cancer using SEER database.</li>
+                <li>Developed Cox regression models; identified racial survival disparities.</li>
+                <li>Implemented advanced survival methodologies: Fine-Gray models, parametric AFT models.</li>
+                <li>Created publication-quality visualizations using R (Kaplan-Meier, Forest plots).</li>
             </ul>
-        </section>
+        </div>
 
-        <!-- Leadership & Involvement -->
-        <section class="mb-5">
-            <h2 class="section-title">Leadership & Involvement</h2>
+        <div class="card">
+            <h3>Graduate Teaching Assistant</h3>
+            <span>Minnesota State University, Mankato | Aug 2025 – Present</span>
             <ul>
-                <li>President, Statistics Club, Minnesota State University, Mankato (2025 – Present)</li>
-                <li>Member, American Statistical Association (ASA) (2025 – Present)</li>
-                <li>Treasurer, Bangladesh Student Organization, Minnesota State University, Mankato (2025 – Present)</li>
+                <li>Teach Elementary Statistics, assist Algebra courses, and introduce students to R.</li>
+                <li>Conduct lab sessions, hold office hours, and develop supplemental learning materials.</li>
             </ul>
-        </section>
+        </div>
 
-        <!-- Additional Information -->
-        <section class="mb-5">
-            <h2 class="section-title">Additional Information</h2>
-            <p><strong>Languages:</strong> English (C1), Bengali (Native)</p>
-            <p><strong>Paper in Progress:</strong> Manuscript on breast cancer survival disparities by molecular subtype</p>
-        </section>
+        <div class="card">
+            <h3>Senior Principal Officer & Manager Operations</h3>
+            <span>First Security Islami Bank PLC | Jul 2019 – Aug 2025</span>
+            <ul>
+                <li>Managed retail and SME banking operations; oversaw credit and portfolio risk for 10,000+ customers.</li>
+                <li>Analyzed large financial datasets to optimize operational efficiency.</li>
+            </ul>
+        </div>
+    </section>
 
-    </div>
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <p>© 2026 Salah Uddin. All rights reserved.</p>
+        <div class="skill-category">
+            <h3>Statistical Software & Programming</h3>
+            <ul>
+                <li>R</li>
+                <li>SAS</li>
+                <li>SPSS</li>
+                <li>Excel (VBA)</li>
+                <li>SQL</li>
+                <li>LaTeX</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Data Analysis & Modeling</h3>
+            <ul>
+                <li>Survival Analysis (Cox, Kaplan-Meier, Parametric)</li>
+                <li>Regression (Linear, Logistic, Poisson)</li>
+                <li>Machine Learning (Random Forest, Gradient Boosting)</li>
+                <li>Time Series (ARIMA, Forecasting)</li>
+                <li>EDA & Data Cleaning</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h3>Visualization & Tools</h3>
+            <ul>
+                <li>Power BI</li>
+                <li>Tableau</li>
+                <li>ggplot2, survminer</li>
+                <li>Jupyter Notebook</li>
+                <li>SEER*Stat</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Breast Cancer Survival Analysis</h3>
+            <p>Analyzed 10-year breast cancer-specific survival across inflammatory and non-inflammatory subtypes using SEER data. Developed Cox models identifying independent prognostic factors. Created comprehensive Kaplan-Meier curves for publication.</p>
+            <p><strong>Tools:</strong> R (survival, survminer, ggplot2), SEER*Stat, LaTeX</p>
+        </div>
+
+        <div class="project">
+            <h3>Econometric Analysis of Food Security in Bangladesh</h3>
+            <p>Performed econometric analysis of household income and consumption patterns using HIES data. Applied multiple regression to identify determinants of food security.</p>
+            <p><strong>Tools:</strong> SPSS</p>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Diplomaed Associate of the Institute of Bankers, Bangladesh (DAIBB) – May 2016</li>
+            <li>Junior Associate of the Institute of Bankers, Bangladesh (JAIBB) – June 2014</li>
+            <li>Leadership, Team Building, and Negotiation Skills – March 2021</li>
+            <li>Anti-Money Laundering (AML) & Combating Financing of Terrorism (CFT) – Aug 2016</li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Salah Uddin | Applied Statistics Portfolio</p>
     </footer>
 
-    <!-- Bootstrap JS CDN (optional, for any interactive components) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
